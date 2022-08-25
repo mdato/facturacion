@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --primary-color: #2877c2;
+  --secondary-color: #1e2139;
+  --body-bg: #141625;
+  --paid-status-bg: #1f2c3f;
+  --paid-status-color: #2877c2;
+  --pending-status-bg: rgba(255, 143, 0, 0.06);
+  --pending-status-color: #2bc459;
+  --small-text-color: #888eb0;
+  --draft-bg: #252945;
+  --delete-btn-bg: #c31c1c;
+  --tranparent-btn-bg: transparent;
+  --edit-btn-bg: #1f2c3f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--body-bg);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.btn {
+  padding: 10px 25px;
+  background: var(--paid-status-bg);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--tranparent-btn-bg);
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--small-text-color);
+}
+
+.main__container {
+  position: absolute;
+  top: 0;
+  left: 130px;
+  width: calc(100% - 130px);
+  padding: 30px 0px;
+}
+
+.pending__status,
+.paid__status,
+.draft__status,
+.edit__btn,
+.delete__btn,
+.mark__as-btn,
+.draft__btn {
+  padding: 10px 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--draft-bg);
+}
+
+.paid__status {
+  color: var(--paid-status-color);
+}
+
+.pending__status {
+  color: var(--pending-status-color);
+}
+
+.draft__status {
+  color: var(--small-text-color);
+}
+
+.sidebar {
+  width: 120px;
+  height: 100vh;
+  background: var(--secondary-color) !important;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__bottom {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: var(--primary-color);
+}
+
+.sidebar__bottom {
+  display: flex;
+  flex-direction: column;
+  background: var(--secondary-color) !important;
+  border-top: 1px solid var(--primary-color);
+}
+
+.sidebar__bottom img {
+  border-radius: 50%;
+}
+
+.invoice__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.invoice__header-logo h3 {
+  color: #fff;
+}
+
+.invoice__total {
+  font-size: 15px;
+}
+
+.invoice__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: var(--secondary-color);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: 1s;
+  color: #fff;
+  cursor: pointer;
+}
+
+.invoice__item:hover {
+  border: 1px solid var(--primary-color);
+  transform: scaleY(1.1);
+}
+
+.invoice__container {
+  padding-bottom: 200px !important;
+}
+
+.back__btn {
+  margin-bottom: 1.9rem;
+}
+
+.back__btn h6 {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.back__btn h6:hover {
+  font-size: 2rem;
+}
+
+.details__status {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.invoice__details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.9rem;
+  background: var(--secondary-color);
+}
+
+.details__btns {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.mark__as-btn {
+  width: 130px !important;
+  padding: 10px 5px !important;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.delete__btn {
+  background: var(--delete-btn-bg);
+  color: #fff;
+}
+
+.edit__btn {
+  background: var(--edit-btn-bg);
+  color: #fff;
+}
+
+.invoice__details {
+  background: var(--secondary-color);
+  padding: 30px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.details__box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.9rem;
+}
+
+.invoice__created-date {
+  margin-bottom: 1.9rem;
+}
+
+.invoice__created-date p,
+.invoice__payment {
+  margin-bottom: 5px;
+}
+
+.invoice__client-address p {
+  margin-bottom: 5px;
+}
+
+.invoice__client-address h4 {
+  margin-bottom: 10px;
+}
+
+.invoice__item-box {
+  background: #252945;
+  padding: 30px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.list__item-box {
+  width: 25% !important;
+  text-align: right !important;
+}
+
+.item__name-box {
+  width: 50% !important;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+.invoice__total {
+  background: #0c0e16;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 0px 0px 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new__invoice {
+  width: 60%;
+  margin: auto;
+}
+
+.new__invoice-header {
+  margin-bottom: 1.9rem;
+}
+
+.form__group input {
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 5px;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form__group {
+  margin-bottom: 1.9rem;
+}
+
+.form__group p {
+  margin-bottom: 10px;
+}
+
+.inline__form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inline__group {
+  width: 48%;
+}
+
+.new__invoice-body {
+  padding-bottom: 40px;
+}
+
+.bill__title {
+  margin-bottom: 20px;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bill__to {
+  margin-top: 50px;
+}
+
+.invoice__items {
+  margin-top: 20px;
+}
+
+.invoice__items h3 {
+  margin-bottom: 30px;
+}
+
+.add__item-btn {
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+
+  outline: none;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.draft__btn {
+  background: #1f2c3f;
+  color: #fff;
+  width: 150px !important;
+}
+
+.new__invoice__btns {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 40px;
+}
+
+.disable {
+  cursor: none;
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.delete__modal {
+  background: rgba(9, 10, 17, 0.76);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  padding: 30px;
+  background: var(--secondary-color);
+  z-index: 99999999;
+  border-radius: 5px;
+}
+
+.modal h3 {
+  margin-bottom: 15px;
+}
+
+.modal p {
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+
+.modal__btns {
+  margin-top: 25px;
+}
+
+.modal__btns button:first-child {
+  background: #fff;
+  color: var(--secondary-color);
+}
+
+.showModal {
+  display: block;
+}
+
+.borroItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 740px) {
+  .sidebar {
+    width: 100vw;
+    height: auto;
+    background: var(--secondary-color) !important;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .invoice__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .new__invoice {
+    width: 95vw;
+    margin: auto;
+  }
+
+  .new__invoice-header {
+    margin-bottom: 1.9rem;
+  }
+
+  .invoice__details {
+    width: 100vw !important;
+    min-width: 350px !important;
+    background: var(--secondary-color);
+    padding: 30px 10px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .main__container {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 95vw;
+    padding: 30px 0px;
+  }
+
+  .details__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1.9rem;
+  }
+
+  .invoice__details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 0.5rem;
+    margin-bottom: 1.9rem;
+    background: var(--secondary-color);
+    gap: 10px;
+  }
+
+  .details__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.1rem;
+  }
+
+  .new__invoice__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    column-gap: 20px !important;
+  }
+
+  .edit__btn {
+    padding: 5px !important;
+    width: 100px !important;
+  }
+
+  .mark__as-btn {
+    padding: 5px !important;
+    width: 100px !important;
+  }
+
+  .add__item-btn {
+    padding: 10px !important;
+    min-height: 35px !important;
+  }
+
+  .draft__btn {
+    padding: 5px !important;
+    max-width: 100px !important;
+  }
+
+  .delete__btn {
+    padding: 5px !important;
+    max-width: 100px !important;
+  }
+
+  .invoice__created-date p,
+  .invoice__payment {
+    margin-top: -20px;
+    margin-bottom: -3px;
+  }
+
+  .invoice__client-address {
+    margin-top: 10px;
+    line-height: 80%;
+  }
+
+  .enviamos {
+    margin-top: 8px;
+    line-height: 90%;
+  }
+
+  button {
+    font-size: 10px !important;
+    max-height: 35px !important;
+  }
+
+  input {
+    font-size: 10px !important;
+  }
+
+  h4 {
+    font-size: 11px !important;
+  }
+
+  h3 {
+    font-size: 13px !important;
+    margin-bottom: -15px;
+  }
+
+  h2 {
+    font-size: 15px !important;
+  }
+
+  p {
+    font-size: 11px !important;
+  }
+
+  .list {
+    font-size: 12px;
+  }
+
+  .invoice__header {
+    line-height: 30px !important;
+  }
+
+  .paid__status,
+  .pending__status,
+  .draft__status {
+    margin-top: 15px;
+    min-height: 35px;
+  }
+
+  .elStatus {
+    margin-top: 15px;
+  }
+
+  .details__status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
