@@ -62,7 +62,7 @@ p {
   position: absolute;
   top: 0;
   left: 130px;
-  width: calc(100% - 130px);
+  width: calc(100% - 140px);
   padding: 30px 0px;
 }
 
