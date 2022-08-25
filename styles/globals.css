@@ -149,7 +149,12 @@ p {
 }
 
 .invoice__total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   font-size: 15px;
+  padding: 0 6px;
 }
 
 .invoice__item {
@@ -241,6 +246,10 @@ p {
   margin-bottom: 1.9rem;
 }
 
+.senderData{
+  padding: 0 20px;
+}
+
 .invoice__created-date {
   margin-bottom: 1.9rem;
 }
@@ -260,7 +269,7 @@ p {
 
 .invoice__item-box {
   background: #252945;
-  padding: 30px;
+  padding: 20px 10px;
   border-radius: 7px 7px 0px 0px;
 }
 
@@ -382,6 +391,12 @@ h4 {
   background: #1f2c3f;
   color: #fff;
   width: 150px !important;
+}
+
+.enviamos {
+  padding: 0 20px;
+  margin-top: 8px;
+  line-height: 90%;
 }
 
 .new__invoice__btns {
@@ -570,8 +585,7 @@ h4 {
   }
 
   .enviamos {
-    margin-top: 8px;
-    line-height: 90%;
+    padding: 0;
   }
 
   button {
@@ -627,5 +641,9 @@ h4 {
 
   .back__btn {
     margin-top: 75px;
+  }
+
+  .senderData{
+    padding: 0;
   }
 }

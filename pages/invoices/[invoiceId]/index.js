@@ -110,7 +110,7 @@ const InvoiceDetails = (props) => {
             <h4>{data.id.substr(0, 5).toUpperCase()}</h4>
             <p>{data.description}</p>
           </div>
-          <div>
+          <div className="senderData">
             <p>{data.senderAddress.street}</p>
             <p>{data.senderAddress.city}</p>
             <p>{data.senderAddress.postalCode}</p>
